@@ -1,0 +1,3 @@
+{
+  "extraPaths": ["/run/current-system/sw/share/webots/lib/controller/python"]
+}
