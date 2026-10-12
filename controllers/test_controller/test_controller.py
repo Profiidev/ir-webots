@@ -1,3 +1,4 @@
+import math
 from typing import cast
 
 from controller import Motor, PositionSensor, Robot
@@ -20,19 +21,24 @@ sensor_base.enable(timestep)
 motor.setPosition(1.2)
 motor_base.setPosition(0.0)
 
+sampleTime = 1 * timestep
+
 # Main loop:
 # Perform simulation steps until Webots is stopping the controller
-while robot.step(timestep) != -1:
+while robot.step(sampleTime) != -1:
     # Read the sensor
     theta = sensor.getValue()
-    # Set actuator position command increasing linearly with time
     time = robot.getTime()
-    position = 1.2 + 0.2 * time
+
+    # Set actuator position command increasing linearly with time
+    position = 1.2 + 0.2 * math.sin(time)
+
     motor.setPosition(position)
-    # Print sensor data
     print(f"arm position: {theta:.2f}")
 
     theta = sensor_base.getValue()
+
     position = 0.2 * time
+
     motor_base.setPosition(position)
     print(f"base position: {theta:.2f}")
