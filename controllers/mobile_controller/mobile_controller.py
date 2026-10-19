@@ -24,4 +24,4 @@ while robot.step(timestep) != -1:
 
     position = robot.getTime()
     left_motor.setPosition(position * 10)
-    right_motor.setPosition(position * 5)
+    right_motor.setPosition(position * 10)

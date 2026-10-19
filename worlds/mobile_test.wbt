@@ -3,13 +3,15 @@
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "../protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/solids/protos/SolidBox.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.2488123056229304 0.19804645902818918 0.9480875680215395 1.84866727667948
-  position 0.34190294415141287 -1.5390748303146595 0.8959975643729556
+  orientation -0.13682453724597993 -0.16158434733420368 0.9773277570518515 4.628362158053257
+  position 0.4311393833780912 1.3120940511860475 0.6379053089009323
+  followType "None"
 }
 TexturedBackground {
 }
@@ -20,4 +22,8 @@ RectangleArena {
 }
 E-puck {
   controller "mobile_controller"
+}
+SolidBox {
+  translation 0.59 0 0.09
+  size 0.2 0.2 0.2
 }

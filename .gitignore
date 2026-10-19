@@ -173,3 +173,5 @@ poetry.toml
 # devenv
 .devenv*
 .direnv
+
+/protos
