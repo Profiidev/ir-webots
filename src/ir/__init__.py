@@ -20,9 +20,7 @@ print("Rotated vector:\n", rotated_vector)
 # Plot vector
 fig = plt.figure()
 ax = fig.add_subplot(111, projection="3d")
-ax.quiver(
-    0, 0, 0, vector[0], vector[1], vector[2], color="b", label="Original Vector"
-)
+ax.quiver(0, 0, 0, vector[0], vector[1], vector[2], color="b", label="Original Vector")
 ax.quiver(
     0,
     0,
@@ -41,3 +39,7 @@ ax.set_ylabel("Y-axis")
 ax.set_zlabel("Z-axis")
 ax.legend()
 plt.show()
+
+
+def main():
+    pass
